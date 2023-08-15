@@ -24,30 +24,30 @@
 
 */
 
-#include <stdio.h>
+#include <stdio.h>//The program converts those numbers to Roman numerals.
 
 void printRoman(int num) {
-    const char *numberroman[] = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-    const int value[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+    const char *numberroman[] = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"} ; 
+    const int value[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1} ;
     
     int i = 0;
     while (num > 0) {
         while (num >= value[i]) {
-            printf("%s", numberroman[i]);
-            num -= value[i];
+            printf( "%s", numberroman[i]) ;
+            num -= value[i] ;
         }
-        i++;
+        i++ ;
     }
 }
 
 int main() {
     int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    printf( "Enter a number: ") ;
+    scanf( "%d", &num) ;
 
-    printf("%d = ", num);
-    printRoman(num);
-    printf("\n");
+    printf( "%d = ", num) ;
+    printRoman(num) ;
+    printf( "\n") ;
 
-    return 0;
-}
+    return 0 ;
+}//end main fuction
